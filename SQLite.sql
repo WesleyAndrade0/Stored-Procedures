@@ -24,7 +24,6 @@ CREATE TABLE IF NOT EXISTS Professor (
 
 DELIMITER //
 
--- Inserir curso
 CREATE PROCEDURE InserirCurso(
     IN nome_curso VARCHAR(50),
     IN departamento VARCHAR(50)
@@ -34,7 +33,6 @@ BEGIN
     VALUES (nome_curso, departamento);
 END //
 
--- Selecionar todos os cursos
 CREATE PROCEDURE SelecionarCursos()
 BEGIN
     SELECT * FROM Curso;
